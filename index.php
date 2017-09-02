@@ -5,8 +5,6 @@
         <title></title>
     </head>
     <body>
-        <?php
-xxyz
-        ?>
+	<h1>hello world!</h1>
     </body>
 </html>
