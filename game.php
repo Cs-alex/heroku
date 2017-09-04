@@ -11,4 +11,5 @@
     </script>
 </html>-->
 <?php
+echo 'xy';
 ?>
