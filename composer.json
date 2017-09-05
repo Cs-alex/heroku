@@ -1,5 +1,6 @@
 {
-  "require": {
-    "silex/silex": "~1.1",
+  "require" : {
+     "php": ">=5.4.2",
+     "cboden/Ratchet": "dev-master"
   }
 }
