@@ -1,1 +1,1 @@
-web: C:\Users\ALEX\Documents\GitHub\heroku\heroku game
+web: heroku game.php
