@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                background-color: lightblue;
+            }
+        </style>
     </head>
     <body>
+        <script>
+            $(document).ready(function() {
+                var square = '<div class="box">'+
+                             '</div>';
+                $('body').append(square);
+            });
+        </script>
         <?php
             echo 'xyc';
         ?>
