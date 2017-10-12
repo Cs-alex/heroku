@@ -152,6 +152,8 @@
                                 $subject = filter_input(INPUT_POST, 'subject');
                                 $message = filter_input(INPUT_POST, 'text');
                                 mail('alex.csende@gmail.com', $subject, $message, $email);
+                            } else {
+                                echo 'error';
                             }
                         ?>
                     </div>
