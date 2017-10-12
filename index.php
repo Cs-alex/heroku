@@ -35,7 +35,7 @@
                             and designer work, what do they do and how, you've came to the right place!
                         </p>
                         <p>I hope you like what you see, and have a nice stay!</p>
-                        <a href="Csende_Alex_CV.psd" id="download">Want to know more? Download my CV!</a>
+                        <a href="" id="download">Want to know more? Download my CV!</a>
                     </div>
                 </div>
             </section>
@@ -233,6 +233,7 @@
                 // Download
                 $('#download').on('click', function(e) {
                     e.preventDefault();
+                    window.location.href = 'Csende_Alex_CV.psd';
                 });
             });
         </script>
