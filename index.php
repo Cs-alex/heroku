@@ -146,13 +146,13 @@
                             <input type="submit" value="Send" id="sub" class="email-input-type" name="sub">
                         </form>
                         <?php
-//                            if (filter_input(INPUT_POST, 'sub')) {
-//                                $name = filter_input(INPUT_POST, 'user');
-//                                $email = filter_input(INPUT_POST, 'e-mail');
-//                                $subject = filter_input(INPUT_POST, 'subject');
-//                                $message = filter_input(INPUT_POST, 'text');
-//                                mail('alex.csende@gmail.com', $subject, $message, $email);
-//                            }
+                            if (filter_input(INPUT_POST, 'sub')) {
+                                $name = filter_input(INPUT_POST, 'user');
+                                $email = filter_input(INPUT_POST, 'e-mail');
+                                $subject = filter_input(INPUT_POST, 'subject');
+                                $message = filter_input(INPUT_POST, 'text');
+                                mail('alex.csende@gmail.com', $subject, $message, $email);
+                            }
                         ?>
                     </div>
                 </div>
