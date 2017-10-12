@@ -151,7 +151,8 @@
                                 $email = filter_input(INPUT_POST, 'e-mail');
                                 $subject = filter_input(INPUT_POST, 'subject');
                                 $message = filter_input(INPUT_POST, 'text');
-                                mail('alex.csende@gmail.com', $subject, $message, $email);
+                                $headers = 'From: '.$name.' ('.$email.')';
+                                mail('alex.csende@gmail.com', $subject, $message, $headers);
                             } else {
                                 echo 'error';
                             }
