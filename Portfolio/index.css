@@ -1,0 +1,324 @@
+* {
+    margin: auto;
+    font-family: sans-serif;
+}
+body {
+    height: 2000px;
+    background-color: gray;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #888888;
+}
+.header {
+    width: 950px;
+    height: 80px;
+}
+.header ul {
+    padding: 0px;
+}
+.header-link {
+    float: left;
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+}
+.header a {
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.header a:hover {
+    color: yellowgreen;
+    transition: 0.3s ease;
+}
+.intro {
+    width: 100%;
+    height: 910px;
+    background-position: right 108px;
+    background-repeat: no-repeat;
+    background-size: auto 800px;
+    background-image: url('alex.png');
+}
+.intro-h1, .section-h1 {
+    color: white;
+    padding: 25px 0px;
+    font-size: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+.intro-h2, .section-h2 {
+    color: whitesmoke;
+    font-family: 'Aldrich';
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.intro-content-container {
+    width: 950px;
+    height: 510px;
+    margin-top: 40px;
+    position: relative;
+}
+.intro-content {
+    float: left;
+    width: 600px;
+    height: 510px;
+    display: none;
+    border-radius: 20px;
+    background-color: dimgray;
+}
+.intro-content h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    letter-spacing: 0px;
+    font-family: 'Sofia';
+    text-transform: initial;
+}
+.intro-content p {
+    color: whitesmoke;
+    padding: 20px;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 30px;
+}
+.intro-content a {
+    width: 80%;
+    color: white;
+    display: block;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #7FFF00;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+.intro-content a:hover {
+    background-color: #7FFF00;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+.stats {
+    width: 100%;
+    height: 1010px;
+    position: relative;
+    filter: grayscale(0%);
+    background-repeat: no-repeat;
+    background-position: right 0px;
+    background-attachment: fixed;
+    background-image: url('codes.png');
+}
+.section-h1 {
+    font-size: 40px;
+}
+.section-h2 {
+    padding-bottom: 30px;
+    font-family: 'Quicksand';
+}
+.stats table {
+    color: white;
+    width: 950px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.stats table td {
+    padding: 15px;
+}
+.name {
+    width: 10%;
+    text-align: right;
+}
+.stat {
+    width: 85%;
+}
+.bar-percent {
+    width: 5%;
+}
+.progress-bar {
+    float: left;
+    width: 1%;
+    height: 18px;
+    background-color: #7FFF00;
+}
+.works {
+    width: 100%;
+    height: 1010px;
+    position: relative;
+    background: linear-gradient(white, transparent 50%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right 0px;
+    background-image: url('refs.png');
+}
+.images {
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    background: black;
+    display: inline-block;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.images img {
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.images img:hover {
+    opacity: 0.7;
+}
+.xp {
+    width: 100%;
+    height: 1250px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right 0px;
+    background-image: url('exp.png');
+}
+.timeline {
+    width: 950px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*background-color: yellow;*/
+    -ms-transform: translateX(-50%) translateY(-40%);
+    -webkit-transform: translate(-50%,-40%);
+    transform: translate(-50%,-40%);
+}
+.jobs {
+    padding: 20px;
+    opacity: 0;
+    /*background-color: red;*/
+}
+.jobs h2 {
+    color: #7FFF00;
+    letter-spacing: 1px;
+}
+.jobs h1 {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'Quicksand';
+}
+.jobs p {
+    color: whitesmoke;
+    line-height: 25px;
+    padding-top: 15px;
+}
+.odd {
+    text-align: left;
+    margin-right: 50%;
+}
+.even {
+    text-align: right;
+    margin-left: 50%;
+}
+.line {
+    width: 8px;
+    height: 1px;
+    background-color: #7FFF00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.contact {
+    width: 100%;
+    height: 950px;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right 0px;
+    background-image: url('email.png');
+}
+.email {
+    width: 800px;
+    padding: 40px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    background-color: #000033;
+    -ms-transform: translateX(-50%) translateY(-40%);
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+}
+.email-text, .email-input {
+    float: left;
+    width: 370px;
+    height: 375px;
+    margin: 20px 10px 20px 20px;
+    /*background-color: #191970;*/
+}
+.email-text h1 {
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-size: 30px;
+}
+.email-text p {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: whitesmoke;
+}
+.email-input {
+    margin: 20px 20px 20px 10px;
+}
+.email-input-type {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.input-name-email {
+    width: 48%;
+    margin: 0px 0px 5px 0px;
+}
+#input-email {
+    float: right;
+}
+#sub {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 15px 0px;
+    margin: 5px 0px 0px 0px;
+    background-color: yellowgreen;
+}
+.contact textarea {
+    height: 200px;
+    resize: none;
+}
+footer {
+    color: white;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #708090;
+}
