@@ -1,2 +1,2 @@
 <?php
-include_once '../../Sajat/Portfolio/index.php';
+include_once '/Portfolio/index.php';
