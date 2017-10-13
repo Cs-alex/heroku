@@ -35,7 +35,7 @@
                             and designer work, what do they do and how, you've came to the right place!
                         </p>
                         <p>I hope you like what you see, and have a nice stay!</p>
-                        <a href="" id="download">Want to know more? Download my CV!</a>
+                        <a href="" id="download">Want to know more? Check out my CV!</a>
                     </div>
                 </div>
             </section>
@@ -146,16 +146,16 @@
                             <input type="submit" value="Send" id="sub" class="email-input-type" name="sub">
                         </form>
                         <?php
-                            if (filter_input(INPUT_POST, 'sub')) {
-                                $name = filter_input(INPUT_POST, 'user');
-                                $email = filter_input(INPUT_POST, 'e-mail');
-                                $subject = filter_input(INPUT_POST, 'subject');
-                                $message = filter_input(INPUT_POST, 'text');
-                                $headers = 'From: '.$name.' ('.$email.')';
-                                mail('alex.csende@gmail.com', $subject, $message, $headers);
-                            } else {
-                                echo 'error';
-                            }
+//                            if (filter_input(INPUT_POST, 'sub')) {
+//                                $name = filter_input(INPUT_POST, 'user');
+//                                $email = filter_input(INPUT_POST, 'e-mail');
+//                                $subject = filter_input(INPUT_POST, 'subject');
+//                                $message = filter_input(INPUT_POST, 'text');
+//                                $headers = 'From: '.$name.' ('.$email.')';
+//                                mail('alex.csende@gmail.com', $subject, $message, $headers);
+//                            } else {
+//                                echo 'error';
+//                            }
                         ?>
                     </div>
                 </div>
@@ -236,7 +236,7 @@
                 // Download
                 $('#download').on('click', function(e) {
                     e.preventDefault();
-                    window.location.href = 'Csende_Alex_CV.psd';
+                    window.location.href = 'Csende_Alex_CV.pdf';
                 });
             });
         </script>
