@@ -225,6 +225,7 @@ header {
     color: whitesmoke;
     line-height: 25px;
     padding-top: 15px;
+    font-size: 20px;
 }
 .odd {
     text-align: left;
@@ -411,9 +412,6 @@ footer {
     }
     .jobs h1 {
         font-size: 30px;
-    }
-    .jobs p {
-        font-size: 20px;
     }
 }
 @media screen and (max-width: 560px) {
