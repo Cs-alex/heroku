@@ -218,7 +218,7 @@
                     var topScr = $(window).scrollTop();
 
                     if((bottomScr > topEle) && (topScr < bottomEle)){
-                        $('.line').animate({height: '556px'}, 800);
+                        $('.line').animate({height: '700px'}, 800);
                         $('.jobs').animate({opacity: 1}, 1000);
                     }
                 }

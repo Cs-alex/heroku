@@ -412,6 +412,9 @@ footer {
     .jobs h1 {
         font-size: 30px;
     }
+    .jobs p {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 560px) {
     .intro-h1 {
