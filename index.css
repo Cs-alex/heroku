@@ -329,9 +329,6 @@ footer {
     .intro {
         /*background-image: none;*/
     }
-    .intro-content {
-        /*float: none;*/
-    }
     .images {
         width: 700px;
     }
@@ -352,6 +349,9 @@ footer {
     }
     .intro-content-container {
         width: 100%;
+    }
+    .intro-content {
+        float: none;
     }
     .stats table {
         width: 100%;
