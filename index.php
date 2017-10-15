@@ -121,7 +121,6 @@
                             As part of my internship, I was assigned to a real estate developer ltd as an IT economist.
                         </p>
                     </div>
-                    <div class="line"></div>
                 </div>
             </section>
             <section id="mail" class="contact">
