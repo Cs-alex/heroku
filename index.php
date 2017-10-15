@@ -35,7 +35,7 @@
                             and designer work, what do they do and how, you've came to the right place!
                         </p>
                         <p>I hope you like what you see, and have a nice stay!</p>
-                        <a href="" id="download">Want to know more? Check out my CV!</a>
+                        <a href="Csende_Alex_CV.pdf" id="download" target="_blank">Want to know more? Check out my CV!</a>
                     </div>
                 </div>
             </section>
@@ -190,13 +190,23 @@
                 // Header
                 function header() {
                     if ($(window).scrollTop() > 80) {
-                        $('header').css({height: 'auto', position: 'fixed', left: '50%', marginLeft: '-50%', zIndex: 10});
+                        if ($(window).width() > 700) {
+                            $('header').css({height: 'auto', position: 'fixed', left: '50%', marginLeft: '-50%', zIndex: 10});
+                        } else {
+                            $('header').css({height: 'auto', position: 'fixed', left: '0px', marginLeft: '0px', zIndex: 10});
+                        }
                         $('header > *').stop().animate({height: '40px'}, 50);
                         $('.header-link a').css({lineHeight: '40px'}, 1);
                     } else {
-                        $('header').css({height: '80px', position: 'relative', left: 'none', marginLeft: 'none', zIndex: 0});
-                        $('header > *').stop().animate({height: '80px'}, 50);
-                        $('.header-link a').css({lineHeight: '80px'}, 1);
+                        if ($(window).width() > 970) {
+                            $('header').css({height: '80px', position: 'relative', left: '0px', marginLeft: '0px', zIndex: 0});
+                            $('header > *').stop().animate({height: '80px'}, 50);
+                            $('.header-link a').css({lineHeight: '80px'}, 1);
+                        } else {
+                            $('header').css({height: '60px', position: 'relative', left: '0px', marginLeft: '0px', zIndex: 0});
+                            $('header > *').stop().animate({height: '60px'}, 50);
+                            $('.header-link a').css({lineHeight: '60px'}, 1);
+                        }
                     }
                 }
                 
@@ -231,12 +241,6 @@
                 $('.header-link a').on('click', function(e) {
                     e.preventDefault();
                     $('html, body').animate({scrollTop: $( $(this).attr('href') ).offset().top}, 800);
-                });
-                
-                // Download
-                $('#download').on('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = 'Csende_Alex_CV.pdf';
                 });
             });
         </script>

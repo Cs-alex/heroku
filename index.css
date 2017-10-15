@@ -72,6 +72,7 @@ header {
     display: none;
     border-radius: 20px;
     background-color: dimgray;
+    box-shadow: 0px 0px 10px black;
 }
 .intro-content h2 {
     color: white;
@@ -98,14 +99,14 @@ header {
     font-size: 25px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #7FFF00;
+    border: 2px solid #000033;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
     transition: background-color 0.5s;
 }
 .intro-content a:hover {
-    background-color: #7FFF00;
+    background-color: #000033;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
@@ -117,7 +118,7 @@ header {
     position: relative;
     filter: grayscale(0%);
     background-repeat: no-repeat;
-    background-position: right 0px;
+    background-position: center center;
     background-attachment: fixed;
     background-image: url('codes.png');
 }
@@ -165,7 +166,7 @@ header {
     background: linear-gradient(white, transparent 50%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: right 0px;
+    background-position: center center;
     background-image: url('refs.png');
 }
 .images {
@@ -193,7 +194,7 @@ header {
     height: 1250px;
     position: relative;
     background-repeat: no-repeat;
-    background-position: right 0px;
+    background-position: center center;
     background-image: url('exp.png');
 }
 .timeline {
@@ -202,7 +203,6 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    /*background-color: yellow;*/
     -ms-transform: translateX(-50%) translateY(-40%);
     -webkit-transform: translate(-50%,-40%);
     transform: translate(-50%,-40%);
@@ -210,7 +210,6 @@ header {
 .jobs {
     padding: 20px;
     opacity: 0;
-    /*background-color: red;*/
 }
 .jobs h2 {
     color: #7FFF00;
@@ -252,7 +251,7 @@ header {
     position: relative;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: right 0px;
+    background-position: center center;
     background-image: url('email.png');
 }
 .email {
@@ -262,6 +261,7 @@ header {
     top: 50%;
     left: 50%;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
     background-color: #000033;
     -ms-transform: translateX(-50%) translateY(-40%);
     -webkit-transform: translate(-50%, -40%);
@@ -272,7 +272,6 @@ header {
     width: 370px;
     height: 375px;
     margin: 20px 10px 20px 20px;
-    /*background-color: #191970;*/
 }
 .email-text h1 {
     color: white;
@@ -309,7 +308,7 @@ header {
     outline: none;
     padding: 15px 0px;
     margin: 5px 0px 0px 0px;
-    background-color: yellowgreen;
+    background-color: #7FFF00;
 }
 .contact textarea {
     height: 200px;
@@ -321,4 +320,130 @@ footer {
     text-align: center;
     line-height: 60px;
     background-color: #708090;
+}
+@media screen and (max-width: 1430px) {
+    .images {
+        width: 1050px;
+    }
+}
+@media screen and (max-width: 1070px) {
+    .images {
+        width: 700px;
+    }
+    .intro-content {
+        float: none;
+    }
+    .timeline {
+        width: 100%;
+        padding: 20px 0px;
+    }
+}
+@media screen and (max-width: 970px) {
+    header, .header {
+        width: 100%;
+        height: 60px;
+    }
+    .header-link a {
+        line-height: 60px;
+    }
+    .intro-content-container {
+        width: 100%;
+    }
+    .stats table {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .contact {
+        height: 1050px;
+    }
+    .email {
+        width: 90%;
+        padding: 0px 20px;
+    }
+    .email-text, .email-input {
+        float: none;
+        width: 100%;
+        margin: auto;
+        height: auto;
+        padding: 20px 0px;
+    }
+    .email-text h1 {
+        text-align: center;
+    }
+    .email-text p {
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 730px) {
+    .images {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .header {
+        left: 0px;
+        margin-left: 0px;
+    }
+    .intro {
+        height: 800px;
+    }
+    .intro-h1 {
+        font-size: 40px;
+    }
+    .section-h1 {
+        font-size: 30px;
+    }
+    .section-h2, .intro-h2 {
+        font-size: 20px;
+    }
+    .intro-content {
+        width: 90%;
+        height: auto;
+        padding: 20px 0px;
+    }
+    .intro-content h2 {
+        padding: 0px;
+    }
+    .intro-content p {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .intro-h1 {
+        font-size: 40px;
+    }
+    .header-link a {
+        font-size: 14px;
+    }
+    .stats table {
+        padding: 0px;
+    }
+    .stats table td {
+        padding: 15px 5px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .header-link a {
+        font-size: 12px;
+    }
+    .intro {
+        height: 1000px;
+    }
+    .intro-h1 {
+        font-size: 35px;
+    }
+    .section-h1 {
+        font-size: 25px;
+    }
+    .section-h2, .intro-h2 {
+        font-size: 15px;
+    }
+    .email h1 {
+        font-size: 20px;
+    }
+    .email p {
+        font-size: 16px;
+    }
 }
