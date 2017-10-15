@@ -99,14 +99,14 @@ header {
     font-size: 25px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid #000033;
+    border: 2px solid #708090;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
     transition: background-color 0.5s;
 }
 .intro-content a:hover {
-    background-color: #000033;
+    background-color: #708090;
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     -o-transition: background-color 0.5s;
@@ -266,7 +266,7 @@ header {
     left: 50%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px black;
-    background-color: #000033;
+    background-color: #708090;
     -ms-transform: translateX(-50%) translateY(-40%);
     -webkit-transform: translate(-50%, -40%);
     transform: translate(-50%, -40%);
@@ -323,14 +323,14 @@ footer {
     height: 60px;
     text-align: center;
     line-height: 60px;
-    background-color: #708090;
+    background-color: #585858;
 }
 @media screen and (max-width: 1430px) {
     .intro {
-        background-image: none;
+        /*background-image: none;*/
     }
     .intro-content {
-        float: none;
+        /*float: none;*/
     }
     .images {
         width: 700px;
@@ -380,8 +380,16 @@ footer {
     }
 }
 @media screen and (max-width: 730px) {
+    .works {
+        height: 1210px;
+    }
     .images {
-        width: 100%;
+        width: 300px;
+        height: auto;
+        overflow: auto;
+    }
+    .images a {
+        float: none;
     }
 }
 @media screen and (max-width: 700px) {
