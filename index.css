@@ -439,6 +439,18 @@ footer {
     .stats table td {
         padding: 15px 5px;
     }
+    .timeline:after {
+        content: none;
+    }
+    .jobs {
+        padding: 40px 20px;
+    }
+    .even {
+        margin-left: 0px;
+    }
+    .odd {
+        margin-right: 0px;
+    }
 }
 @media screen and (max-width: 450px) {
     .header-link a {
