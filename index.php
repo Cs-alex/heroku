@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Csende Alex - Portfolio</title>
         <link href="index.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/jpg" href="icon.png">
