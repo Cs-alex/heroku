@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Csende Alex - Webprogrammer</title>
+        <title>Csende Alex - Portfolio</title>
         <link href="index.css" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/jpg" href="icon.png">
         <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
@@ -24,7 +24,7 @@
                 </div>
             </header>
             <section class="intro parallax">
-                <h1 class="intro-h1">Csende Bálint Alex</h1>
+                <h1 class="intro-h1">Alex Bálint Csende</h1>
                 <h2 class="intro-h2">Webprogrammer<br> & developer</h2>
                 <div class="intro-content-container">
                     <div class="intro-content">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
             </section>
-            <footer>© 2017 by Csende Alex</footer>
+            <footer>© 2017 by Alex Csende</footer>
         </main>
         <script>
             $(document).ready(function() {
@@ -177,6 +177,7 @@
                     var topScr = $(window).scrollTop();
 
                     if((bottomScr > topEle) && (topScr < bottomEle)){
+                        progress = true;
                         $('#html').animate({width: '80%'}, 1000);
                         $('#css').animate({width: '70%'}, 1000);
                         $('#js').animate({width: '70%'}, 1000);
@@ -225,13 +226,16 @@
                 // BackgroundScroll
                 var parallax = $('.parallax');
                 var speed = 0.5;
+                var progress = false;
                 $(window).on('scroll', function() {
                     [].slice.call(parallax).forEach(function(el, i){
                         var windowYOffset = window.pageYOffset,
                         elBackgrounPos = "right " + (windowYOffset * speed + 108) + "px";
                         el.style.backgroundPosition = elBackgrounPos;
                     });
-                    progressBar();
+                    if (progress == false) {
+                        progressBar();
+                    }
                     header();
                     exp();
                 });
