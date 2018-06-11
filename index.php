@@ -30,7 +30,7 @@
                 <div class="intro-content-container">
                     <div class="intro-content">
                         <h2>Welcome!</h2>
-                        <p>Hey, there! My name's Alex (yup, the guy on the right), and you are currently looking at my Portfolio.</p>
+                        <p>Hey there! My name's Alex (yup, the guy on the right), and you are currently looking at my Portfolio.</p>
                         <p>
                             If you're interested in knowing about my works, my progress, or maybe just how does the average programmer
                             and designer work, what do they do and how, you've came to the right place!
@@ -100,23 +100,32 @@
                 <h1 class="section-h1">My experiences so far...</h1>
                 <h2 class="section-h2">My past jobs and experiences</h2>
                 <div class="timeline">
-                    <div class="jobs even">
-                        <h2>2016-2017</h2>
-                        <h1>Webprogrammer</h1>
+                    <div class="jobs odd">
+                        <h2>2017 - 2018</h2>
+                        <h1>Front-End Developer</h1>
                         <p>
-                            I worked for a private entrepreneur for a year long as full-stack, but mostly backend programmer.
+                            For most part, I helped develop a company's property website, as well as created a layout designer.
+                            <a href="https://www.whichphone.us/">Whichphone.us</a>
+                            <a href="https://www.accs4it.com/browse?page=1">Accs4it.com</a>
+                        </p>
+                    </div>
+                    <div class="jobs even">
+                        <h2>2016 - 2017</h2>
+                        <h1>Full Stack Developer</h1>
+                        <p>
+                            I worked for a private entrepreneur for a year long as full stack, but mostly backend programmer.
                             Associated sites: Whichphone.us, Accs4it.com.
                         </p>
                     </div>
                     <div class="jobs odd">
-                        <h2>2015-2015</h2>
+                        <h2>2015 - 2015</h2>
                         <h1>Data Recorder</h1>
                         <p>
                             For a 2 month long project, i worked as a data recorder in Gyál, Pest county.
                         </p>
                     </div>
                     <div class="jobs even">
-                        <h2>2012-2012</h2>
+                        <h2>2012 - 2012</h2>
                         <h1>Professional Practice</h1>
                         <p>
                             As part of my internship, I was assigned to a real estate developer ltd as an IT economist.
@@ -160,16 +169,16 @@
                     </div>
                 </div>
             </section>
-            <footer>© 2017 by Alex Csende</footer>
+            <footer>© 2017-2018 by Alex Csende</footer>
         </main>
         <script>
             $(document).ready(function() {
-                
+
                 // Intro
                 setTimeout(function() {
                     $('.intro-content').fadeIn(800);
                 }, 1000);
-                
+
                 // Progress
                 function progressBar() {
                     var topEle = $('table').offset().top;
@@ -187,7 +196,7 @@
                         $('#ps').animate({width: '40%'}, 1000);
                     }
                 }
-                
+
                 // Header
                 function header() {
                     if ($(window).scrollTop() > 80) {
@@ -210,7 +219,7 @@
                         }
                     }
                 }
-                
+
                 // Experience
                 function exp() {
                     var topEle = $('.timeline').offset().top;
@@ -223,7 +232,7 @@
                         $('.jobs').animate({opacity: 1}, 1000);
                     }
                 }
-                
+
                 // BackgroundScroll
                 var parallax = $('.parallax');
                 var speed = 0.5;
@@ -240,7 +249,7 @@
                     header();
                     exp();
                 });
-                
+
                 // Inner links
                 $('.header-link a').on('click', function(e) {
                     e.preventDefault();
