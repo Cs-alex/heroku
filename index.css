@@ -304,6 +304,9 @@ header {
     width: 48%;
     margin: 0px 0px 5px 0px;
 }
+.history_links {
+    color: blue;
+}
 #input-email {
     float: right;
 }

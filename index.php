@@ -104,9 +104,7 @@
                         <h2>2017 - 2018</h2>
                         <h1>Front-End Developer</h1>
                         <p>
-                            For most part, I helped develop a company's property website, as well as created a layout designer.
-                            <a href="https://www.whichphone.us/">Whichphone.us</a>
-                            <a href="https://www.accs4it.com/browse?page=1">Accs4it.com</a>
+                            For most part, I helped develop a company's website as front-end, as well as created a layout designer using Fabric.js.
                         </p>
                     </div>
                     <div class="jobs even">
@@ -114,7 +112,13 @@
                         <h1>Full Stack Developer</h1>
                         <p>
                             I worked for a private entrepreneur for a year long as full stack, but mostly backend programmer.
-                            Associated sites: Whichphone.us, Accs4it.com.
+                            Associated sites:
+                            <p>
+                                <a class="history_links" href="https://www.whichphone.us/">Whichphone.us</a>
+                            </p>
+                            <p>
+                                <a class="history_links" href="https://www.accs4it.com/browse?page=1">Accs4it.com</a>
+                            </p>
                         </p>
                     </div>
                     <div class="jobs odd">
