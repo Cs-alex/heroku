@@ -240,7 +240,7 @@
                 $(window).on('scroll', function() {
                     [].slice.call(parallax).forEach(function(el, i){
                         var windowYOffset = window.pageYOffset,
-                        elBackgrounPos = "right " + (windowYOffset * speed) + "px";
+                        elBackgrounPos = "right " + (windowYOffset * speed + 8) + "px";
                         el.style.backgroundPosition = elBackgrounPos;
                     });
                     if (progress == false) {
