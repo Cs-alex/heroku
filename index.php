@@ -93,7 +93,6 @@
                 <h2 class="section-h2">All websites created or worked on by me</h2>
                 <div class="images">
                     <a href="https://www.whichphone.us/" target="_blank"><img src="whichphone.png" alt=""></a>
-                    <a href="https://www.accs4it.com/browse?page=1" target="_blank"><img src="accs4it.png" alt=""></a>
                 </div>
             </section>
             <section id="exp" class="xp">
@@ -115,9 +114,6 @@
                             Associated sites:
                             <p>
                                 <a class="history_links" href="https://www.whichphone.us/">Whichphone.us</a>
-                            </p>
-                            <p>
-                                <a class="history_links" href="https://www.accs4it.com/browse?page=1">Accs4it.com</a>
                             </p>
                         </p>
                     </div>
