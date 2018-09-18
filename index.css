@@ -40,7 +40,7 @@ header {
     height: 910px;
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: auto 1000px;
+    background-size: auto 900px;
     background-image: url('alex.png');
 }
 .intro-h1, .section-h1 {
