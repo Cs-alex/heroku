@@ -5,24 +5,6 @@ $(document).ready(function() {
         $('.intro-content').fadeIn(800);
     }, 1000);
 
-    // Progress
-    function progressBar() {
-        var topEle = $('table').offset().top;
-        var bottomEle = $('table').offset().top + $('table').outerHeight();
-        var bottomScr = $(window).scrollTop() + $(window).height();
-        var topScr = $(window).scrollTop();
-
-        if((bottomScr > topEle) && (topScr < bottomEle)){
-            progress = true;
-            $('#html').animate({width: '80%'}, 1000);
-            $('#css').animate({width: '70%'}, 1000);
-            $('#js').animate({width: '70%'}, 1000);
-            $('#php').animate({width: '75%'}, 1000);
-            $('#sql').animate({width: '70%'}, 1000);
-            $('#ps').animate({width: '40%'}, 1000);
-        }
-    }
-
     // Header
     function header() {
         if ($(window).scrollTop() > 80) {
@@ -32,19 +14,23 @@ $(document).ready(function() {
                 $('header').css({height: 'auto', position: 'fixed', left: '0px', marginLeft: '0px', zIndex: 10});
             }
             $('header > *').stop().animate({height: '40px'}, 50);
-            $('.header-link a').css({lineHeight: '40px'}, 1);
         } else {
             if ($(window).width() > 970) {
                 $('header').css({height: '80px', position: 'relative', left: '0px', marginLeft: '0px', zIndex: 0});
                 $('header > *').stop().animate({height: '80px'}, 50);
-                $('.header-link a').css({lineHeight: '80px'}, 1);
             } else {
                 $('header').css({height: '60px', position: 'relative', left: '0px', marginLeft: '0px', zIndex: 0});
                 $('header > *').stop().animate({height: '60px'}, 50);
-                $('.header-link a').css({lineHeight: '60px'}, 1);
             }
         }
     }
+
+    // Language image hover
+    $('.lang-img').children('img').hover(function() {
+        $(this).css({filter: 'grayscale(0%) brightness(125%)'});
+    }, function() {
+        $(this).css('filter', 'grayscale(100%)');
+    });
 
     // Experience
     function exp() {
@@ -59,19 +45,15 @@ $(document).ready(function() {
         }
     }
 
-    // BackgroundScroll
+    // Background scroll
     var parallax = $('.parallax');
     var speed = 0.5;
-    var progress = false;
     $(window).on('scroll', function() {
         [].slice.call(parallax).forEach(function(el, i){
             var windowYOffset = window.pageYOffset,
             elBackgrounPos = "right " + (windowYOffset * speed + 8) + "px";
             el.style.backgroundPosition = elBackgrounPos;
         });
-        if (progress == false) {
-            progressBar();
-        }
         header();
         exp();
     });

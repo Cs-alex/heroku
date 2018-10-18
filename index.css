@@ -6,6 +6,7 @@ body {
     height: 2000px;
     background-color: gray;
 }
+/* Header */
 header {
     width: 100%;
     height: 80px;
@@ -16,18 +17,18 @@ header {
     height: 80px;
 }
 .header ul {
+    height: 100%;
     padding: 0px;
+    display: flex;
 }
 .header-link {
-    float: left;
-    width: 20%;
+    width: 25%;
     text-align: center;
     display: inline-block;
 }
 .header a {
     color: white;
     text-align: center;
-    line-height: 80px;
     text-decoration: none;
     transition: 0.3s ease;
 }
@@ -35,13 +36,14 @@ header {
     color: #7FFF00;
     transition: 0.3s ease;
 }
+/* Intro */
 .intro {
     width: 100%;
     height: 910px;
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: auto 900px;
-    background-image: url('alex.png');
+    background-image: url('img/alex.png');
 }
 .intro-h1, .section-h1 {
     color: white;
@@ -112,16 +114,17 @@ header {
     -o-transition: background-color 0.5s;
     transition: background-color 0.5s;
 }
+/* Languages and skills */
 .stats {
     width: 100%;
-    height: 1010px;
+    height: 900px;
     padding: 100px 0px;
     position: relative;
     filter: grayscale(0%);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-image: url('codes.png');
+    background-image: url('img/codes.png');
 }
 .section-h1 {
     font-size: 40px;
@@ -144,22 +147,29 @@ header {
 .stats table td {
     padding: 15px;
 }
-.name {
-    width: 10%;
-    text-align: right;
+.lang-wrapper {
+    max-width: 1200px;
 }
-.stat {
-    width: 85%;
+.lang {
+    display: flex;
+    margin: 25px 0;
 }
-.bar-percent {
-    width: 5%;
+.lang-label {
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin: auto 50px auto 0;
 }
-.progress-bar {
-    float: left;
-    width: 1%;
-    height: 18px;
-    background-color: #7FFF00;
+.lang-img {
+    margin-left: 0;
+    vertical-align: middle;
 }
+.lang-img img {
+    margin-right: 10px;
+    transition: all 0.2s;
+    filter: grayscale(100%);
+}
+/* References */
 .works {
     width: 100%;
     height: 1010px;
@@ -168,15 +178,13 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('refs.png');
+    background-image: url('img/refs.png');
 }
 .images {
-    height: 350px;
     position: absolute;
     top: 50%;
     left: 50%;
     overflow: hidden;
-    background: black;
     display: inline-block;
     -ms-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translate(-50%,-50%);
@@ -199,7 +207,7 @@ header {
     position: relative;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('exp.png');
+    background-image: url('img/exp.png');
 }
 .timeline {
     width: 950px;
@@ -242,6 +250,15 @@ header {
     padding-top: 15px;
     font-size: 20px;
 }
+.jobs a {
+    transition: 0.3s;
+    color: #7FFF00;
+    text-decoration: none;
+}
+.jobs a:hover {
+    transition: 0.3s;
+    color: #00ff97;
+}
 .odd {
     text-align: left;
     margin-right: 50%;
@@ -250,88 +267,21 @@ header {
     text-align: right;
     margin-left: 50%;
 }
-.contact {
-    width: 100%;
-    height: 950px;
-    position: relative;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url('email.png');
-}
-.email {
-    width: 800px;
-    padding: 40px 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px black;
-    background-color: #404040;
-    -ms-transform: translateX(-50%) translateY(-40%);
-    -webkit-transform: translate(-50%, -40%);
-    transform: translate(-50%, -40%);
-}
-.email-text, .email-input {
-    float: left;
-    width: 370px;
-    height: 375px;
-    margin: 20px 10px 20px 20px;
-}
-.email-text h1 {
-    color: white;
-    padding: 20px;
-    text-align: left;
-    font-size: 30px;
-}
-.email-text p {
-    padding: 20px;
-    font-size: 20px;
-    line-height: 30px;
-    color: whitesmoke;
-}
-.email-input {
-    margin: 20px 20px 20px 10px;
-}
-.email-input-type {
-    width: 100%;
-    padding: 10px 5px;
-    margin: 5px 0px;
-    font-size: 18px;
-    box-sizing: border-box;
-}
-.input-name-email {
-    width: 48%;
-    margin: 0px 0px 5px 0px;
-}
 .history_links:after, .history_links:before {
     color: blue;
 }
-#input-email {
-    float: right;
-}
-#sub {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 15px 0px;
-    margin: 5px 0px 0px 0px;
-    background-color: #7FFF00;
-}
-.contact textarea {
-    height: 200px;
-    resize: none;
-}
+/* Footer */
 footer {
     color: white;
-    height: 60px;
+    height: 40px;
     text-align: center;
-    line-height: 60px;
+    line-height: 40px;
     background-color: #585858;
 }
+/* Responsive */
 @media screen and (max-width: 1430px) {
     .intro {
-        /*background-image: none;*/
+        background-image: none;
     }
     .images {
         width: 700px;
@@ -359,28 +309,6 @@ footer {
     }
     .stats table {
         width: 100%;
-    }
-}
-@media screen and (max-width: 900px) {
-    .contact {
-        height: 1050px;
-    }
-    .email {
-        width: 90%;
-        padding: 0px 20px;
-    }
-    .email-text, .email-input {
-        float: none;
-        width: 100%;
-        margin: auto;
-        height: auto;
-        padding: 20px 0px;
-    }
-    .email-text h1 {
-        text-align: center;
-    }
-    .email-text p {
-        padding: 10px;
     }
 }
 @media screen and (max-width: 730px) {
@@ -470,11 +398,5 @@ footer {
     }
     .section-h2, .intro-h2 {
         font-size: 15px;
-    }
-    .email h1 {
-        font-size: 20px;
-    }
-    .email p {
-        font-size: 16px;
     }
 }
