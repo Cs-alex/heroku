@@ -6,6 +6,12 @@ body {
     height: 2000px;
     background-color: gray;
 }
+article {
+    margin: 100px auto;
+}
+.section {
+    padding: 50px 0;
+}
 /* Header */
 header {
     width: 100%;
@@ -117,8 +123,6 @@ header {
 /* Languages and skills */
 .stats {
     width: 100%;
-    height: 900px;
-    padding: 100px 0px;
     position: relative;
     filter: grayscale(0%);
     background-repeat: no-repeat;
@@ -130,7 +134,6 @@ header {
     font-size: 40px;
 }
 .section-h2 {
-    padding-bottom: 30px;
     font-family: 'Quicksand';
 }
 .stats table {
@@ -172,7 +175,6 @@ header {
 /* References */
 .works {
     width: 100%;
-    height: 1010px;
     position: relative;
     background: linear-gradient(white, transparent 50%);
     background-attachment: fixed;
@@ -180,31 +182,38 @@ header {
     background-position: center center;
     background-image: url('img/refs.png');
 }
+.works-wrapper {
+    height: 75px;
+    display: flex;
+    margin-bottom: 20px;
+}
 .images {
-    position: absolute;
     top: 50%;
     left: 50%;
     overflow: hidden;
+    position: relative;
     display: inline-block;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -ms-transform: translateX(-50%) translateY(0%);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
 }
 .images img {
+    width: 100%;
     -moz-transition: all 0.3s linear;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
-.images img:hover {
-    opacity: 0.7;
+.description {
+    height: 55px;
+    padding: 10px;
+    display: none;
+    color: #777777;
+    background-color: #777777;
 }
-.images a {
-    float: left;
-}
+/* Jobs */
 .xp {
     width: 100%;
-    height: 1250px;
-    position: relative;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url('img/exp.png');
@@ -212,12 +221,7 @@ header {
 .timeline {
     width: 950px;
     padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translateX(-50%) translateY(-40%);
-    -webkit-transform: translate(-50%,-40%);
-    transform: translate(-50%,-40%);
+    position: relative;
 }
 .timeline:after {
     content: "";
@@ -301,9 +305,6 @@ footer {
         width: 100%;
         height: 60px;
     }
-    .header-link a {
-        line-height: 60px;
-    }
     .intro-content-container {
         width: 100%;
     }
@@ -312,9 +313,6 @@ footer {
     }
 }
 @media screen and (max-width: 730px) {
-    .works {
-        height: 1210px;
-    }
     .images {
         width: 300px;
         height: auto;

@@ -51,7 +51,7 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         [].slice.call(parallax).forEach(function(el, i){
             var windowYOffset = window.pageYOffset,
-            elBackgrounPos = "right " + (windowYOffset * speed + 8) + "px";
+            elBackgrounPos = "right " + (windowYOffset * speed + 10) + "px";
             el.style.backgroundPosition = elBackgrounPos;
         });
         header();
@@ -62,6 +62,18 @@ $(document).ready(function() {
     $('.header-link a').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({scrollTop: $( $(this).attr('href') ).offset().top}, 800);
+    });
+
+    // Works description
+    $('.works-wrapper').hover(function() {
+        var website = $(this);
+        website.children('.description').animate({width: 'toggle'}, 250);
+        setTimeout(function() {
+            website.find('span').css({color: 'white', transition: '0.4s'});
+        }, 200);
+    }, function() {
+        $(this).find('span').css({color: '#777777', transition: '0s'});
+        $(this).children('.description').animate({width: 'toggle'}, 250);
     });
     
 });
