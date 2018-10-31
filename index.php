@@ -49,12 +49,24 @@
                             <label>Front-end</label>
                         </div>
                         <div class="lang-img">
-                            <img src="img/html2.png">
-                            <img src="img/css2.png">
-                            <img src="img/bootstrap2.png">
-                            <img src="img/js2.png">
-                            <img src="img/jquery2.png">
-                            <img src="img/fabric2.png">
+                            <div class=lang-img-div>
+                                <img src="img/html3.png">
+                            </div>
+                            <div class=lang-img-div>
+                                <img src="img/css3.png">
+                            </div>
+                            <div class=lang-img-div>
+                                <img src="img/bootstrap3.png">
+                            </div>
+                            <div class=lang-img-div>
+                                <img src="img/js3.png">
+                            </div>
+                            <div class=lang-img-div>
+                                <img src="img/jquery3.png">
+                            </div>
+                            <div class=lang-img-div>
+                                <img src="img/fabric3.png">
+                            </div>
                         </div>
                     </div>
                     <div class="lang">
@@ -62,8 +74,12 @@
                             <label>Back-end</label>
                         </div>
                         <div class="lang-img">
-                            <img src="img/php2.png">
-                            <img src="img/mysql2.png">
+                            <div class=lang-img-div>
+                                <img src="img/php.png">
+                            </div>
+                            <div class=lang-img-div>
+                                <img src="img/mysql3.png">
+                            </div>
                         </div>
                     </div>
                     <div class="lang">
@@ -71,7 +87,9 @@
                             <label>Graphics</label>
                         </div>
                         <div class="lang-img">
-                            <img src="img/ps.png">
+                            <div class=lang-img-div>
+                                <img src="img/ps3.png">
+                            </div>
                         </div>
                     </div>
                 </article>

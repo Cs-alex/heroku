@@ -164,13 +164,16 @@ header {
     margin: auto 50px auto 0;
 }
 .lang-img {
+    display: flex;
     margin-left: 0;
-    vertical-align: middle;
+}
+.lang-img-div {
+    width: 140px;
+    height: 140px;
+    display: flex;
 }
 .lang-img img {
-    margin-right: 10px;
-    transition: all 0.2s;
-    filter: grayscale(100%);
+    display: none;
 }
 /* References */
 .works {

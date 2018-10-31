@@ -26,11 +26,23 @@ $(document).ready(function() {
     }
 
     // Language image hover
-    $('.lang-img').children('img').hover(function() {
-        $(this).css({filter: 'grayscale(0%) brightness(125%)'});
-    }, function() {
-        $(this).css('filter', 'grayscale(100%)');
-    });
+    function technologies() {
+        var topEle = $('.lang-wrapper').offset().top;
+        var bottomEle = $('.lang-wrapper').offset().top + $('.lang-wrapper').outerHeight();
+        var bottomScr = $(window).scrollTop() + $(window).height();
+        var topScr = $(window).scrollTop();
+
+        if ((bottomScr > topEle) && (topScr < bottomEle)){
+            $('.lang-img-div').each(function() {
+                var current = $(this).children('img');
+                setTimeout(function() {
+                    if (current.not(':visible')) {
+                        current.fadeIn(1000);
+                    }
+                }, 400);
+            });
+        }
+    }
 
     // Experience
     function exp() {
@@ -39,7 +51,7 @@ $(document).ready(function() {
         var bottomScr = $(window).scrollTop() + $(window).height();
         var topScr = $(window).scrollTop();
 
-        if((bottomScr > topEle) && (topScr < bottomEle)){
+        if ((bottomScr > topEle) && (topScr < bottomEle)){
             $('.line').animate({height: '700px'}, 800);
             $('.jobs').animate({opacity: 1}, 1000);
         }
@@ -55,6 +67,7 @@ $(document).ready(function() {
             el.style.backgroundPosition = elBackgrounPos;
         });
         header();
+        technologies();
         exp();
     });
 
@@ -73,7 +86,7 @@ $(document).ready(function() {
         }, 200);
     }, function() {
         $(this).find('span').css({color: '#777777', transition: '0s'});
-        $(this).children('.description').animate({width: 'toggle'}, 250);
+        $(this).children('.description').hide();
     });
     
 });
