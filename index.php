@@ -44,28 +44,29 @@
                 <h1 class="section-h1">My progress so far...</h1>
                 <h2 class="section-h2">Knowledge about the various technologies</h2>
                 <article class="lang-wrapper">
+                    <div class="tooltip"></div>
                     <div class="lang">
                         <div class="lang-label">
                             <label>Front-end</label>
                         </div>
                         <div class="lang-img">
                             <div class=lang-img-div>
-                                <img src="img/html3.png">
+                                <img src="img/html.png" alt="HTML5" class="asd">
                             </div>
                             <div class=lang-img-div>
-                                <img src="img/css3.png">
+                                <img src="img/css.png" alt="CCS3">
                             </div>
                             <div class=lang-img-div>
-                                <img src="img/bootstrap3.png">
+                                <img src="img/bootstrap.png" alt="Bootstrap">
                             </div>
                             <div class=lang-img-div>
-                                <img src="img/js3.png">
+                                <img src="img/js.png" alt="Javascript">
                             </div>
                             <div class=lang-img-div>
-                                <img src="img/jquery3.png">
+                                <img src="img/jquery.png" alt="JQuery">
                             </div>
                             <div class=lang-img-div>
-                                <img src="img/fabric3.png">
+                                <img src="img/fabric.png" alt="Fabric JS">
                             </div>
                         </div>
                     </div>
@@ -75,10 +76,10 @@
                         </div>
                         <div class="lang-img">
                             <div class=lang-img-div>
-                                <img src="img/php.png">
+                                <img src="img/php.png" alt="PHP">
                             </div>
                             <div class=lang-img-div>
-                                <img src="img/mysql3.png">
+                                <img src="img/mysql.png" alt="MySQL">
                             </div>
                         </div>
                     </div>
@@ -88,7 +89,7 @@
                         </div>
                         <div class="lang-img">
                             <div class=lang-img-div>
-                                <img src="img/ps3.png">
+                                <img src="img/ps.png" alt="Photoshop">
                             </div>
                         </div>
                     </div>
@@ -99,19 +100,25 @@
                 <h2 class="section-h2">All websites created or worked on by me</h2>
                 <article class="images">
                     <div class="works-wrapper">
-                        <a href="https://www.whichphone.us/" target="_blank">
+                        <div>
                             <img src="img/whichphone.png" alt="Whichphone">
-                        </a>
+                        </div>
                         <div class="description">
                             <span>This website shows the best mobile, tablet and watches.</span>
+                            <div class="description-link">
+                                <a href="https://www.whichphone.us/" target="_blank">Check it out!</a>
+                            </div>
                         </div>
                     </div>
                     <div class="works-wrapper">
-                        <a href="https://www.funpic.us/" target="_blank">
+                        <div>
                             <img src="img/funpic.png" alt="Funpic">
-                        </a>
+                        </div>
                         <div class="description">
                             <span>A social media site, similar to 9GAG.</span>
+                            <div class="description-link">
+                                <a href="https://www.funpic.us/" target="_blank">Check it out!</a>
+                            </div>
                         </div>
                     </div>
                 </article>

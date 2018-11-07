@@ -16,11 +16,12 @@ article {
 header {
     width: 100%;
     height: 80px;
+    display: flex;
+    transition: all 0.2s ease;
     background-color: #888888;
 }
 .header {
     width: 950px;
-    height: 80px;
 }
 .header ul {
     height: 100%;
@@ -41,6 +42,12 @@ header {
 .header a:hover {
     color: #7FFF00;
     transition: 0.3s ease;
+}
+.header-small {
+    z-index: 10;
+    height: 40px;
+    position: fixed;
+    transition: all 0.2s ease;
 }
 /* Intro */
 .intro {
@@ -171,8 +178,34 @@ header {
     width: 140px;
     height: 140px;
     display: flex;
+    position: relative;
 }
-.lang-img img {
+.lang-img-div img {
+    display: none;
+}
+.lang-img-div-hovered-w {
+    width: 140px;
+    transition: all 0.5s ease-in;
+}
+.lang-img-div-hovered-h {
+    height: 140px;
+    transition: all 0.5s ease-in;
+}
+.tooltip {
+    z-index: 5;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #7FFF00;
+    background-color: #777777;
+}
+.tooltip-visible {
+    display: initial;
+}
+.tooltip-hidden {
+    top: 0;
+    left: 0;
     display: none;
 }
 /* References */
@@ -187,13 +220,12 @@ header {
 }
 .works-wrapper {
     height: 75px;
-    display: flex;
-    margin-bottom: 20px;
+    margin: 0 10px 20px 10px;
+    display: inline-block;
 }
 .images {
     top: 50%;
     left: 50%;
-    overflow: hidden;
     position: relative;
     display: inline-block;
     -ms-transform: translateX(-50%) translateY(0%);
@@ -207,11 +239,26 @@ header {
     transition: all 0.3s linear;
 }
 .description {
-    height: 55px;
+    top: 75px;
+    width: 355px;
     padding: 10px;
     display: none;
+    font-size: 20px;
     color: #777777;
+    position: absolute;
     background-color: #777777;
+}
+.description-link {
+    margin-top: 15px;
+    text-align: center;
+}
+.description-link a {
+    color: #7FFF00;
+    text-decoration: none;
+}
+.description-link a:hover {
+    transition: 0.3s;
+    color: #00ff97;
 }
 /* Jobs */
 .xp {
@@ -304,7 +351,7 @@ footer {
     }
 }
 @media screen and (max-width: 970px) {
-    header, .header {
+    header {
         width: 100%;
         height: 60px;
     }
@@ -385,6 +432,28 @@ footer {
     }
 }
 @media screen and (max-width: 450px) {
+    /* Languages and skills */
+    .lang {
+        text-align: center;
+        flex-direction: column;
+    }
+    .lang-label {
+        width: 100%;
+        margin: auto auto 50px 0;
+    }
+    /* References */
+    .images {
+        overflow: initial;
+    }
+    .works-wrapper {
+        position: relative;
+    }
+    .description {
+        top: 56px;
+        width: auto;
+        z-index: 10;
+    }
+    /* Other */
     .header-link a {
         font-size: 12px;
     }

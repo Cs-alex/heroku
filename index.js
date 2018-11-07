@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    var mouseX = 0;
+    var mouseY = 0;
+
     // Intro
     setTimeout(function() {
         $('.intro-content').fadeIn(800);
@@ -7,21 +10,10 @@ $(document).ready(function() {
 
     // Header
     function header() {
-        if ($(window).scrollTop() > 80) {
-            if ($(window).width() > 700) {
-                $('header').css({height: 'auto', position: 'fixed', left: '50%', marginLeft: '-50%', zIndex: 10});
-            } else {
-                $('header').css({height: 'auto', position: 'fixed', left: '0px', marginLeft: '0px', zIndex: 10});
-            }
-            $('header > *').stop().animate({height: '40px'}, 50);
+        if ($(window).scrollTop() > 0) {
+            $('header').addClass('header-small');
         } else {
-            if ($(window).width() > 970) {
-                $('header').css({height: '80px', position: 'relative', left: '0px', marginLeft: '0px', zIndex: 0});
-                $('header > *').stop().animate({height: '80px'}, 50);
-            } else {
-                $('header').css({height: '60px', position: 'relative', left: '0px', marginLeft: '0px', zIndex: 0});
-                $('header > *').stop().animate({height: '60px'}, 50);
-            }
+            $('header').removeClass('header-small');
         }
     }
 
@@ -32,16 +24,27 @@ $(document).ready(function() {
         var bottomScr = $(window).scrollTop() + $(window).height();
         var topScr = $(window).scrollTop();
 
-        if ((bottomScr > topEle) && (topScr < bottomEle)){
-            $('.lang-img-div').each(function() {
-                var current = $(this).children('img');
-                setTimeout(function() {
-                    if (current.not(':visible')) {
-                        current.fadeIn(1000);
-                    }
-                }, 400);
+        if ((bottomScr > topEle) && (topScr < bottomEle)) {
+            $('.lang-img').children('.lang-img-div').each(function(i) {
+                $(this).children('img').delay(200 * i).fadeIn(500);
             });
         }
+
+        $('.lang-img-div').children('img').hover(function() {
+            if ($(this).width() > $(this).height()) {
+                $(this).addClass('lang-img-div-hovered-w');
+            } else {
+                $(this).addClass('lang-img-div-hovered-h');
+            }
+            $('.tooltip').text($(this).attr('alt')).removeClass('tooltip-hidden').addClass('tooltip-visible');
+        }, function() {
+            if ($(this).width() > $(this).height()) {
+                $(this).removeClass('lang-img-div-hovered-w');
+            } else {
+                $(this).removeClass('lang-img-div-hovered-h');
+            }
+            $('.tooltip').removeClass('tooltip-visible').addClass('tooltip-hidden');
+        });
     }
 
     // Experience
@@ -51,8 +54,7 @@ $(document).ready(function() {
         var bottomScr = $(window).scrollTop() + $(window).height();
         var topScr = $(window).scrollTop();
 
-        if ((bottomScr > topEle) && (topScr < bottomEle)){
-            $('.line').animate({height: '700px'}, 800);
+        if ((bottomScr > topEle) && (topScr < bottomEle)) {
             $('.jobs').animate({opacity: 1}, 1000);
         }
     }
@@ -61,7 +63,7 @@ $(document).ready(function() {
     var parallax = $('.parallax');
     var speed = 0.5;
     $(window).on('scroll', function() {
-        [].slice.call(parallax).forEach(function(el, i){
+        [].slice.call(parallax).forEach(function(el, i) {
             var windowYOffset = window.pageYOffset,
             elBackgrounPos = "right " + (windowYOffset * speed + 10) + "px";
             el.style.backgroundPosition = elBackgrounPos;
@@ -80,7 +82,7 @@ $(document).ready(function() {
     // Works description
     $('.works-wrapper').hover(function() {
         var website = $(this);
-        website.children('.description').animate({width: 'toggle'}, 250);
+        website.children('.description').animate({height: 'toggle'}, 250);
         setTimeout(function() {
             website.find('span').css({color: 'white', transition: '0.4s'});
         }, 200);
@@ -88,5 +90,13 @@ $(document).ready(function() {
         $(this).find('span').css({color: '#777777', transition: '0s'});
         $(this).children('.description').hide();
     });
+
+    // Mouse position
+    $(document).on('mousemove', function(e) {
+        console.log(e.target.class);
+        mouseX = event.pageX;
+        mouseY = event.pageY;
+        $('.tooltip').css({top: ($('#stats').offset.y - mouseY), left: ($('#stats').offset.x - mouseX)})
+    })
     
 });
