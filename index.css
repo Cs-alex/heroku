@@ -245,6 +245,7 @@ header {
 /* Jobs */
 .xp {
     width: 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
