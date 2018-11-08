@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-    var mouseX = 0;
-    var mouseY = 0;
-
     // Intro
     setTimeout(function() {
         $('.intro-content').fadeIn(800);
@@ -29,22 +26,6 @@ $(document).ready(function() {
                 $(this).children('img').delay(200 * i).fadeIn(500);
             });
         }
-
-        $('.lang-img-div').children('img').hover(function() {
-            if ($(this).width() > $(this).height()) {
-                $(this).addClass('lang-img-div-hovered-w');
-            } else {
-                $(this).addClass('lang-img-div-hovered-h');
-            }
-            $('.tooltip').text($(this).attr('alt')).removeClass('tooltip-hidden').addClass('tooltip-visible');
-        }, function() {
-            if ($(this).width() > $(this).height()) {
-                $(this).removeClass('lang-img-div-hovered-w');
-            } else {
-                $(this).removeClass('lang-img-div-hovered-h');
-            }
-            $('.tooltip').removeClass('tooltip-visible').addClass('tooltip-hidden');
-        });
     }
 
     // Experience
@@ -90,13 +71,5 @@ $(document).ready(function() {
         $(this).find('span').css({color: '#777777', transition: '0s'});
         $(this).children('.description').hide();
     });
-
-    // Mouse position
-    $(document).on('mousemove', function(e) {
-        console.log(e.target.class);
-        mouseX = event.pageX;
-        mouseY = event.pageY;
-        $('.tooltip').css({top: ($('#stats').offset.y - mouseY), left: ($('#stats').offset.x - mouseX)})
-    })
     
 });

@@ -183,31 +183,6 @@ header {
 .lang-img-div img {
     display: none;
 }
-.lang-img-div-hovered-w {
-    width: 140px;
-    transition: all 0.5s ease-in;
-}
-.lang-img-div-hovered-h {
-    height: 140px;
-    transition: all 0.5s ease-in;
-}
-.tooltip {
-    z-index: 5;
-    padding: 10px;
-    color: white;
-    position: absolute;
-    border-radius: 10px;
-    border: 1px solid #7FFF00;
-    background-color: #777777;
-}
-.tooltip-visible {
-    display: initial;
-}
-.tooltip-hidden {
-    top: 0;
-    left: 0;
-    display: none;
-}
 /* References */
 .works {
     width: 100%;
@@ -219,9 +194,14 @@ header {
     background-image: url('img/refs.png');
 }
 .works-wrapper {
+    width: 375px;
     height: 75px;
-    margin: 0 10px 20px 10px;
+    position: relative;
     display: inline-block;
+    margin: 0 10px 20px 10px;
+}
+.works-img {
+    display: flex;
 }
 .images {
     top: 50%;
@@ -239,18 +219,20 @@ header {
     transition: all 0.3s linear;
 }
 .description {
-    top: 75px;
-    width: 355px;
-    padding: 10px;
+    z-index: 10;
+    width: 100%;
     display: none;
     font-size: 20px;
     color: #777777;
     position: absolute;
     background-color: #777777;
 }
+.description-span {
+    padding: 10px 10px 0 10px;
+}
 .description-link {
-    margin-top: 15px;
     text-align: center;
+    padding: 20px 10px 10px 10px;
 }
 .description-link a {
     color: #7FFF00;
@@ -337,8 +319,23 @@ footer {
     .intro {
         background-image: none;
     }
-    .images {
-        width: 700px;
+}
+@media screen and (max-width: 1320px) {
+    /* Languages and skills */
+    .lang {
+        text-align: center;
+        flex-direction: column;
+    }
+    .lang-img-div {
+        display: inline-flex;
+    }
+    .lang-label {
+        width: 100%;
+        margin: auto auto 50px 0;
+    }
+    .lang-img {
+        margin: auto;
+        display: block;
     }
 }
 @media screen and (max-width: 1070px) {
@@ -351,6 +348,12 @@ footer {
     }
 }
 @media screen and (max-width: 970px) {
+    /* References */
+    .works-wrapper {
+        display: block;
+        margin: 0 0 20px 0;
+    }
+    /* Other */
     header {
         width: 100%;
         height: 60px;
@@ -362,17 +365,8 @@ footer {
         width: 100%;
     }
 }
-@media screen and (max-width: 730px) {
-    .images {
-        width: 300px;
-        height: auto;
-        overflow: auto;
-    }
-    .images a {
-        float: none;
-    }
-}
 @media screen and (max-width: 700px) {
+    /* Other */
     .header {
         left: 0px;
         margin-left: 0px;
@@ -406,6 +400,7 @@ footer {
     }
 }
 @media screen and (max-width: 560px) {
+    /* Other */
     .intro-h1 {
         font-size: 40px;
     }
@@ -432,26 +427,19 @@ footer {
     }
 }
 @media screen and (max-width: 450px) {
-    /* Languages and skills */
-    .lang {
-        text-align: center;
-        flex-direction: column;
-    }
-    .lang-label {
-        width: 100%;
-        margin: auto auto 50px 0;
-    }
     /* References */
     .images {
-        overflow: initial;
+        width: 100%;
     }
     .works-wrapper {
-        position: relative;
+        width: auto;
+        margin: 20px;
+    }
+    .works-img {
+        flex-direction: column;
     }
     .description {
-        top: 56px;
-        width: auto;
-        z-index: 10;
+        position: relative;
     }
     /* Other */
     .header-link a {

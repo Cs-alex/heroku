@@ -44,7 +44,6 @@
                 <h1 class="section-h1">My progress so far...</h1>
                 <h2 class="section-h2">Knowledge about the various technologies</h2>
                 <article class="lang-wrapper">
-                    <div class="tooltip"></div>
                     <div class="lang">
                         <div class="lang-label">
                             <label>Front-end</label>
@@ -100,22 +99,26 @@
                 <h2 class="section-h2">All websites created or worked on by me</h2>
                 <article class="images">
                     <div class="works-wrapper">
-                        <div>
+                        <div class="works-img">
                             <img src="img/whichphone.png" alt="Whichphone">
                         </div>
                         <div class="description">
-                            <span>This website shows the best mobile, tablet and watches.</span>
+                            <div class="description-span">
+                                <span>This website shows the best mobile, tablet and watches.</span>
+                            </div>
                             <div class="description-link">
                                 <a href="https://www.whichphone.us/" target="_blank">Check it out!</a>
                             </div>
                         </div>
                     </div>
                     <div class="works-wrapper">
-                        <div>
+                        <div class="works-img">
                             <img src="img/funpic.png" alt="Funpic">
                         </div>
                         <div class="description">
-                            <span>A social media site, similar to 9GAG.</span>
+                            <div class="description-span">
+                                <span>A social media site, similar to 9GAG.</span>
+                            </div>
                             <div class="description-link">
                                 <a href="https://www.funpic.us/" target="_blank">Check it out!</a>
                             </div>
