@@ -44,9 +44,9 @@ $(document).ready(function() {
     var parallax = $('.parallax');
     var speed = 0.5;
     $(window).on('scroll', function() {
-        [].slice.call(parallax).forEach(function(el, i) {
+        [].slice.call(parallax).forEach(function(el) {
             var windowYOffset = window.pageYOffset,
-            elBackgrounPos = "right " + (windowYOffset * speed + 10) + "px";
+            elBackgrounPos = "right " + (windowYOffset * speed + 90) + "px";
             el.style.backgroundPosition = elBackgrounPos;
         });
         header();
